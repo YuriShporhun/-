@@ -1,0 +1,746 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Report xmlns="http://schemas.microsoft.com/sqlserver/reporting/2008/01/reportdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <Body>
+    <ReportItems>
+      <Textbox Name="Textbox1">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>КНИГА</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>УЧЕТА ДОХОДОВ И РАСХОДОВ ИНДИВИДУАЛЬНЫХ ПРЕДПРЕНИМАТЕЛЕЙ,</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>ПРИМЕНЯЮЩИХ СИСТЕМУ НАЛООБЛАЖЕНИЯ ДЛЯ СЕЛЬСКОХОЗЯЙСТВЕННЫХ ТОВАРОПРОИЗВОДИТЕЛЕЙ</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>(ЕДИНЫЙ СЕЛЬСКОХОЗЯЙСТВЕННЫЙ НАЛОГ)</Value>
+                <Style>
+                  <FontSize>12pt</FontSize>
+                  <FontWeight>Bold</FontWeight>
+                </Style>
+              </TextRun>
+            </TextRuns>
+            <Style>
+              <TextAlign>Center</TextAlign>
+            </Style>
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox1</rd:DefaultName>
+        <Top>2.63384cm</Top>
+        <Left>2.08703cm</Left>
+        <Height>3.48396cm</Height>
+        <Width>14.37979cm</Width>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox2">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Приложение №1</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>к приказу министерства финансов</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Российской Федерации</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>от 11.12.2006 №169н</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox2</rd:DefaultName>
+        <Top>0.57891cm</Top>
+        <Left>11.39627cm</Left>
+        <Height>1.87854cm</Height>
+        <Width>5.91312cm</Width>
+        <ZIndex>1</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox3">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Label>YeatTB</Label>
+                <Value>="на " + Parameters!year.Value + " год"</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox3</rd:DefaultName>
+        <Top>6.93773cm</Top>
+        <Left>3.80683cm</Left>
+        <Height>0.6cm</Height>
+        <Width>5.48979cm</Width>
+        <ZIndex>2</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox4">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Фамилия, имя, отчество</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>индивидуально предпренимателя:</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox4</rd:DefaultName>
+        <Top>7.61534cm</Top>
+        <Left>0.84349cm</Left>
+        <Height>1.07894cm</Height>
+        <Width>5.93958cm</Width>
+        <ZIndex>3</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Line Name="Line1">
+        <Top>9.42128cm</Top>
+        <Left>0.84349cm</Left>
+        <Height>0cm</Height>
+        <Width>8.77063cm</Width>
+        <ZIndex>4</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Line>
+      <Textbox Name="Textbox6">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Идентификационный номер налогоплательщика - индивидульного  предпренимателя (ИНН)</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox6</rd:DefaultName>
+        <Top>9.78112cm</Top>
+        <Left>0.84349cm</Left>
+        <Height>1.07625cm</Height>
+        <Width>9.1675cm</Width>
+        <ZIndex>5</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Line Name="Line2">
+        <Top>11.59291cm</Top>
+        <Left>0.84349cm</Left>
+        <Height>0cm</Height>
+        <Width>8.77063cm</Width>
+        <ZIndex>6</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Line>
+      <Textbox Name="Textbox7">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Parameters!inn.Value</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox7</rd:DefaultName>
+        <Top>10.93145cm</Top>
+        <Left>1.3462cm</Left>
+        <Height>0.6cm</Height>
+        <Width>7.95042cm</Width>
+        <ZIndex>7</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox8">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>=Parameters!fio.Value</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox8</rd:DefaultName>
+        <Top>8.78953cm</Top>
+        <Left>1.3462cm</Left>
+        <Height>0.6cm</Height>
+        <Width>7.95042cm</Width>
+        <ZIndex>8</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox9">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Единица измерения: руб</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox9</rd:DefaultName>
+        <Top>11.7693cm</Top>
+        <Left>1.3462cm</Left>
+        <Height>0.6cm</Height>
+        <Width>7.95042cm</Width>
+        <ZIndex>9</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox10">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Место жительства индивидуального предпренимателя</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox10</rd:DefaultName>
+        <Top>12.74974cm</Top>
+        <Left>0.84349cm</Left>
+        <Height>0.6cm</Height>
+        <Width>9.1675cm</Width>
+        <ZIndex>10</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Line Name="Line3">
+        <Top>13.91391cm</Top>
+        <Left>0.84349cm</Left>
+        <Height>0cm</Height>
+        <Width>15.12062cm</Width>
+        <ZIndex>11</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Line>
+      <Textbox Name="Textbox11">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Номера расчетных и иных счетов</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox11</rd:DefaultName>
+        <Top>14.41662cm</Top>
+        <Left>0.84349cm</Left>
+        <Height>0.6cm</Height>
+        <Width>8.45313cm</Width>
+        <ZIndex>12</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Line Name="Line4">
+        <Top>15.6337cm</Top>
+        <Left>0.84349cm</Left>
+        <Height>0cm</Height>
+        <Width>15.12062cm</Width>
+        <ZIndex>13</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+        </Style>
+      </Line>
+      <Textbox Name="Textbox12">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>(Номера расчетных и иных счетов и наименование соответствующих банков)</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox12</rd:DefaultName>
+        <Top>15.70426cm</Top>
+        <Left>2.40454cm</Left>
+        <Height>0.6cm</Height>
+        <Width>13.03041cm</Width>
+        <ZIndex>14</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox13">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Форма по ОКУД</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox13</rd:DefaultName>
+        <Top>8.12603cm</Top>
+        <Left>11.32571cm</Left>
+        <Height>0.6cm</Height>
+        <Width>2.84396cm</Width>
+        <ZIndex>15</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox14">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>Дата(год, месяц, число)</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox14</rd:DefaultName>
+        <Top>9.11232cm</Top>
+        <Left>10.10863cm</Left>
+        <Height>0.6cm</Height>
+        <Width>4.06104cm</Width>
+        <ZIndex>16</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Rectangle Name="Rectangle1">
+        <ReportItems>
+          <Line Name="Line5">
+            <Top>0.90339cm</Top>
+            <Height>0cm</Height>
+            <Width>2.3677cm</Width>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Textbox Name="Textbox15">
+            <CanGrow>true</CanGrow>
+            <KeepTogether>true</KeepTogether>
+            <Paragraphs>
+              <Paragraph>
+                <TextRuns>
+                  <TextRun>
+                    <Value>Коды</Value>
+                    <Style />
+                  </TextRun>
+                </TextRuns>
+                <Style>
+                  <TextAlign>Center</TextAlign>
+                </Style>
+              </Paragraph>
+            </Paragraphs>
+            <rd:DefaultName>Textbox15</rd:DefaultName>
+            <Top>0.19756cm</Top>
+            <Height>0.6cm</Height>
+            <Width>2.3677cm</Width>
+            <ZIndex>1</ZIndex>
+            <Style>
+              <Border>
+                <Style>None</Style>
+              </Border>
+              <PaddingLeft>2pt</PaddingLeft>
+              <PaddingRight>2pt</PaddingRight>
+              <PaddingTop>2pt</PaddingTop>
+              <PaddingBottom>2pt</PaddingBottom>
+            </Style>
+          </Textbox>
+          <Line Name="Line6">
+            <Top>1.82182cm</Top>
+            <Height>0cm</Height>
+            <Width>2.3677cm</Width>
+            <ZIndex>2</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Line Name="Line7">
+            <Top>2.667cm</Top>
+            <Height>0cm</Height>
+            <Width>2.3677cm</Width>
+            <ZIndex>3</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Line Name="Line8">
+            <Top>4.03958cm</Top>
+            <Height>0cm</Height>
+            <Width>2.3677cm</Width>
+            <ZIndex>4</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+          <Line Name="Line9">
+            <Top>5.63562cm</Top>
+            <Height>0cm</Height>
+            <Width>2.3677cm</Width>
+            <ZIndex>5</ZIndex>
+            <Style>
+              <Border>
+                <Style>Solid</Style>
+              </Border>
+            </Style>
+          </Line>
+        </ReportItems>
+        <KeepTogether>true</KeepTogether>
+        <Top>7.11412cm</Top>
+        <Left>14.2755cm</Left>
+        <Height>6.23562cm</Height>
+        <Width>2.3677cm</Width>
+        <ZIndex>17</ZIndex>
+        <Style>
+          <Border>
+            <Style>Solid</Style>
+          </Border>
+          <BackgroundImage>
+            <Source>External</Source>
+            <Value>="Учет ЕСХН ДЕМО"</Value>
+          </BackgroundImage>
+        </Style>
+      </Rectangle>
+      <Textbox Name="Textbox16">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>По ОКПО</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox16</rd:DefaultName>
+        <Top>10.5537cm</Top>
+        <Left>12.29113cm</Left>
+        <Height>0.6cm</Height>
+        <Width>1.87854cm</Width>
+        <ZIndex>18</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+      <Textbox Name="Textbox17">
+        <CanGrow>true</CanGrow>
+        <KeepTogether>true</KeepTogether>
+        <Paragraphs>
+          <Paragraph>
+            <TextRuns>
+              <TextRun>
+                <Value>По ОКЕЙ</Value>
+                <Style />
+              </TextRun>
+            </TextRuns>
+            <Style />
+          </Paragraph>
+        </Paragraphs>
+        <rd:DefaultName>Textbox17</rd:DefaultName>
+        <Top>12.74974cm</Top>
+        <Left>12.36169cm</Left>
+        <Height>0.6cm</Height>
+        <Width>1.80799cm</Width>
+        <ZIndex>19</ZIndex>
+        <Style>
+          <Border>
+            <Style>None</Style>
+          </Border>
+          <PaddingLeft>2pt</PaddingLeft>
+          <PaddingRight>2pt</PaddingRight>
+          <PaddingTop>2pt</PaddingTop>
+          <PaddingBottom>2pt</PaddingBottom>
+        </Style>
+      </Textbox>
+    </ReportItems>
+    <Height>25cm</Height>
+    <Style>
+      <Border>
+        <Style>None</Style>
+      </Border>
+      <BackgroundImage>
+        <Source>Embedded</Source>
+        <Value>=IIF(CBool(Parameters!isDemo.Value), "Безымянный", nothing)</Value>
+        <MIMEType>image/png</MIMEType>
+        <BackgroundRepeat>Repeat</BackgroundRepeat>
+      </BackgroundImage>
+    </Style>
+  </Body>
+  <Width>18cm</Width>
+  <Page>
+    <PageHeight>29.7cm</PageHeight>
+    <PageWidth>21cm</PageWidth>
+    <LeftMargin>2cm</LeftMargin>
+    <RightMargin>1cm</RightMargin>
+    <TopMargin>1cm</TopMargin>
+    <BottomMargin>1cm</BottomMargin>
+    <ColumnSpacing>0.13cm</ColumnSpacing>
+    <Style />
+  </Page>
+  <AutoRefresh>0</AutoRefresh>
+  <ReportParameters>
+    <ReportParameter Name="year">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="inn">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="fio">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+    <ReportParameter Name="isDemo">
+      <DataType>String</DataType>
+      <Prompt>ReportParameter1</Prompt>
+    </ReportParameter>
+  </ReportParameters>
+  <EmbeddedImages>
+    <EmbeddedImage Name="Безымянный">
+      <MIMEType>image/png</MIMEType>
+      <ImageData>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</ImageData>
+    </EmbeddedImage>
+  </EmbeddedImages>
+  <ConsumeContainerWhitespace>true</ConsumeContainerWhitespace>
+  <rd:ReportUnitType>Cm</rd:ReportUnitType>
+  <rd:ReportID>591f10ed-e492-4099-aded-9c895be0bfd1</rd:ReportID>
+</Report>

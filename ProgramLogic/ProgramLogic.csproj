@@ -1,0 +1,158 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8C7AA88A-EFE2-43CD-B6BD-E3BBCE2EC2C3}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AccountingForAgriculturalTax</RootNamespace>
+    <AssemblyName>ProgramLogic</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BankAccountLogic.cs" />
+    <Compile Include="CommonAssetsLogic.cs" />
+    <Compile Include="GuideToOperationsLogic.cs" />
+    <Compile Include="IncomeAndExpenseLogic.cs" />
+    <Compile Include="IncomeTypeCodeData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>IncomeTypeCodeData.resx</DependentUpon>
+    </Compile>
+    <Compile Include="IncomeTypeCodeReferenceLogic.cs" />
+    <Compile Include="ProgramLogic.cs" />
+    <Compile Include="ProgramLogicView.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="TaxAuthorityPlaceCodeReferenceLogic.cs" />
+    <Compile Include="TaxPeriodCodeReferenceLogic.cs" />
+    <Compile Include="FormOfReorganizationReferenceLogic.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataProvider\DataProvider.csproj">
+      <Project>{82093079-4310-4a35-8f28-375e30d6a8b4}</Project>
+      <Name>DataProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataStructures\DataStructures.csproj">
+      <Project>{747c9d1a-e42d-4bba-aa3e-c34a316669f2}</Project>
+      <Name>DataStructures</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="IncomeTypeCodeData.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>IncomeTypeCodeData.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\КодПоступлений_010.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\КодПоступлений_020.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\КодПоступлений_030.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\КодПоступлений_120.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\КодПоступлений_130.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\КодПоступлений_140.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\КодПоступлений_141.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\КодПоступлений_160.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\КодПоступлений_170.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\КодПоступлений_171.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\КодПоступлений_172.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\КодПоступлений_173.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\КодПоступлений_180.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\КодПоступлений_220.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\КодПоступлений_281.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\КодПоступлений_282.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\КодПоступлений_321.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\КодПоступлений_322.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\КодПоступлений_323.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\КодПоступлений_324.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\КодПоступлений_340.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\КодПоступлений_360.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\КодПоступлений_400.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\КодПуступлений_500.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

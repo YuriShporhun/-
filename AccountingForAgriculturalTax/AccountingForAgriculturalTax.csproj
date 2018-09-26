@@ -1,0 +1,598 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{91B7CB7D-CF62-4A5E-8877-58A9F5BECB05}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>AccountingForAgriculturalTax</RootNamespace>
+    <AssemblyName>ЕСХН</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <TargetFrameworkProfile />
+    <PublishUrl>C:\Users\Юрий\Desktop\ПРОЕКТ ЕСХН\ЕСХН\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>true</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>true</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <UpdateUrl>http://localhost/ЕСХН/</UpdateUrl>
+    <ProductName>ЕСХН</ProductName>
+    <PublisherName>РосГид</PublisherName>
+    <MinimumRequiredVersion>2014.05.001.8</MinimumRequiredVersion>
+    <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
+    <ApplicationRevision>92</ApplicationRevision>
+    <ApplicationVersion>2015.07.001.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <CreateDesktopShortcut>true</CreateDesktopShortcut>
+    <ExcludeDeploymentUrl>true</ExcludeDeploymentUrl>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>
+    </DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>Pictures\eshn.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>00AEAAA4F49271FE072E48E6F57CB4B549C8C2F0</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>
+    </ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup />
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Interfrace\AuxiliaryForms\ImportForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfrace\AuxiliaryForms\ImportForm.Designer.cs">
+      <DependentUpon>ImportForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfrace\References\IncomeTypeCodeReferenceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfrace\References\IncomeTypeCodeReferenceForm.Designer.cs">
+      <DependentUpon>IncomeTypeCodeReferenceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfrace\ESHNDeclarationForms\AddUseOfPropertyForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfrace\ESHNDeclarationForms\AddUseOfPropertyForm.Designer.cs">
+      <DependentUpon>AddUseOfPropertyForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfrace\References\FormOfReorganizationsReferenceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfrace\References\FormOfReorganizationsReferenceForm.Designer.cs">
+      <DependentUpon>FormOfReorganizationsReferenceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HelpInfo.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HelpInfo.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Images.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Images.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Interfrace\AuxiliaryForms\AboutForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfrace\AuxiliaryForms\AboutForm.Designer.cs">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfrace\AuxiliaryForms\HelpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfrace\AuxiliaryForms\HelpForm.Designer.cs">
+      <DependentUpon>HelpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfrace\AuxiliaryForms\InstallAdobeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfrace\AuxiliaryForms\InstallAdobeForm.Designer.cs">
+      <DependentUpon>InstallAdobeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfrace\AuxiliaryForms\WarningForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfrace\AuxiliaryForms\WarningForm.Designer.cs">
+      <DependentUpon>WarningForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfrace\BankAccountsForms\AddBankAccountForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfrace\BankAccountsForms\AddBankAccountForm.Designer.cs">
+      <DependentUpon>AddBankAccountForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfrace\ESHNDeclarationForms\PreviewESHNDeclarationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfrace\ESHNDeclarationForms\PreviewESHNDeclarationForm.Designer.cs">
+      <DependentUpon>PreviewESHNDeclarationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfrace\References\AddGuideToOperationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfrace\References\AddGuideToOperationForm.Designer.cs">
+      <DependentUpon>AddGuideToOperationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfrace\CommonAssetsForms\AddCommonAssetsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfrace\CommonAssetsForms\AddCommonAssetsForm.Designer.cs">
+      <DependentUpon>AddCommonAssetsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfrace\IncomeAndExpenseForms\AddIncomeAndExpenseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfrace\IncomeAndExpenseForms\AddIncomeAndExpenseForm.Designer.cs">
+      <DependentUpon>AddIncomeAndExpenseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfrace\BankAccountsForms\BankAccountsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfrace\BankAccountsForms\BankAccountsForm.Designer.cs">
+      <DependentUpon>BankAccountsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfrace\References\TaxAuthorityPlaceCodeReferenceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfrace\References\TaxAuthorityPlaceCodeReferenceForm.Designer.cs">
+      <DependentUpon>TaxAuthorityPlaceCodeReferenceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfrace\References\TaxPeriodReferenceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfrace\References\TaxPeriodReferenceForm.Designer.cs">
+      <DependentUpon>TaxPeriodReferenceForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfrace\ReportsForms\CommonAssetsReportPreviewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfrace\ReportsForms\CommonAssetsReportPreviewForm.Designer.cs">
+      <DependentUpon>CommonAssetsReportPreviewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfrace\CommonAssetsForms\EditCommonAssetsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfrace\CommonAssetsForms\EditCommonAssetsForm.Designer.cs">
+      <DependentUpon>EditCommonAssetsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfrace\IncomeAndExpenseForms\EditIncomeAndExpenseForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfrace\IncomeAndExpenseForms\EditIncomeAndExpenseForm.Designer.cs">
+      <DependentUpon>EditIncomeAndExpenseForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfrace\References\GuideToOperationsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfrace\References\GuideToOperationsForm.Designer.cs">
+      <DependentUpon>GuideToOperationsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfrace\ReportsForms\IncomeAndExpenseReportPreviewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfrace\ReportsForms\IncomeAndExpenseReportPreviewForm.Designer.cs">
+      <DependentUpon>IncomeAndExpenseReportPreviewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfrace\RequisiteForms\AddRequisiteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfrace\RequisiteForms\AddRequisiteForm.Designer.cs">
+      <DependentUpon>AddRequisiteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfrace\RequisiteForms\ChangesWasSavedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfrace\RequisiteForms\ChangesWasSavedForm.Designer.cs">
+      <DependentUpon>ChangesWasSavedForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Interfrace\AuxiliaryForms\RegistrationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfrace\AuxiliaryForms\RegistrationForm.Designer.cs">
+      <DependentUpon>RegistrationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfrace\RequisiteForms\RequisiteForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfrace\RequisiteForms\RequisiteForm.Designer.cs">
+      <DependentUpon>RequisiteForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfrace\References\SelectGuideToOperationForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfrace\References\SelectGuideToOperationForm.Designer.cs">
+      <DependentUpon>SelectGuideToOperationForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfrace\ReportsForms\StickerReportPreviewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfrace\ReportsForms\StickerReportPreviewForm.Designer.cs">
+      <DependentUpon>StickerReportPreviewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Interfrace\ReportsForms\TitlePageReportPreviewForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfrace\ReportsForms\TitlePageReportPreviewForm.Designer.cs">
+      <DependentUpon>TitlePageReportPreviewForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SemesterToLoad.cs" />
+    <Compile Include="RequiredSoftwareChecker.cs" />
+    <Compile Include="VersionChanges.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>VersionChanges.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Interfrace\References\ОКВЭДReferenceForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Interfrace\References\ОКВЭДReferenceForm.Designer.cs">
+      <DependentUpon>ОКВЭДReferenceForm.cs</DependentUpon>
+    </Compile>
+    <None Include="Database\AgriculturalDataBase.db3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Resources\ЕСХН_ТИТУЛ_ПредставляетсяВНалоговыйОрган.txt" />
+    <None Include="Resources\ЕСХН_ТИТУЛ_ФормаРеорганизации.txt" />
+    <None Include="Resources\ЕСХН_ТИТУЛ_РеорганизованныйКПП.txt" />
+    <None Include="Resources\ЕСХН_ТИТУЛ_РеорганизованныйИНН.txt" />
+    <None Include="Resources\ЕСХН_ТИТУЛ_НомерКорректировки.txt" />
+    <EmbeddedResource Include="Interfrace\AuxiliaryForms\ImportForm.resx">
+      <DependentUpon>ImportForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfrace\References\ОКВЭДReferenceForm.resx">
+      <DependentUpon>ОКВЭДReferenceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Resources\Changes.txt" />
+    <EmbeddedResource Include="Interfrace\ESHNDeclarationForms\AddUseOfPropertyForm.resx">
+      <DependentUpon>AddUseOfPropertyForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfrace\References\FormOfReorganizationsReferenceForm.resx">
+      <DependentUpon>FormOfReorganizationsReferenceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HelpInfo.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>HelpInfo.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Images.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Images.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfrace\AuxiliaryForms\AboutForm.resx">
+      <DependentUpon>AboutForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfrace\AuxiliaryForms\HelpForm.resx">
+      <DependentUpon>HelpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfrace\AuxiliaryForms\InstallAdobeForm.resx">
+      <DependentUpon>InstallAdobeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfrace\AuxiliaryForms\WarningForm.resx">
+      <DependentUpon>WarningForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfrace\BankAccountsForms\AddBankAccountForm.resx">
+      <DependentUpon>AddBankAccountForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfrace\ESHNDeclarationForms\PreviewESHNDeclarationForm.resx">
+      <DependentUpon>PreviewESHNDeclarationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfrace\References\AddGuideToOperationForm.resx">
+      <DependentUpon>AddGuideToOperationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfrace\CommonAssetsForms\AddCommonAssetsForm.resx">
+      <DependentUpon>AddCommonAssetsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfrace\IncomeAndExpenseForms\AddIncomeAndExpenseForm.resx">
+      <DependentUpon>AddIncomeAndExpenseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Content Include="Database\pure_ESHN.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="Interfrace\BankAccountsForms\BankAccountsForm.resx">
+      <DependentUpon>BankAccountsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfrace\IncomeAndExpenseForms\EditIncomeAndExpenseForm.resx">
+      <DependentUpon>EditIncomeAndExpenseForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfrace\References\IncomeTypeCodeReferenceForm.resx">
+      <DependentUpon>IncomeTypeCodeReferenceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfrace\References\TaxAuthorityPlaceCodeReferenceForm.resx">
+      <DependentUpon>TaxAuthorityPlaceCodeReferenceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfrace\References\TaxPeriodReferenceForm.resx">
+      <DependentUpon>TaxPeriodReferenceForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfrace\RequisiteForms\AddRequisiteForm.resx">
+      <DependentUpon>AddRequisiteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfrace\RequisiteForms\ChangesWasSavedForm.resx">
+      <DependentUpon>ChangesWasSavedForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\CommonAssetsReport.rdlc" />
+    <EmbeddedResource Include="Interfrace\ReportsForms\CommonAssetsReportPreviewForm.resx">
+      <DependentUpon>CommonAssetsReportPreviewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfrace\CommonAssetsForms\EditCommonAssetsForm.resx">
+      <DependentUpon>EditCommonAssetsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfrace\References\GuideToOperationsForm.resx">
+      <DependentUpon>GuideToOperationsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfrace\ReportsForms\IncomeAndExpenseReportPreviewForm.resx">
+      <DependentUpon>IncomeAndExpenseReportPreviewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\IncomeAndExpenseReport.rdlc" />
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Interfrace\AuxiliaryForms\RegistrationForm.resx">
+      <DependentUpon>RegistrationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfrace\RequisiteForms\RequisiteForm.resx">
+      <DependentUpon>RequisiteForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\StickerReport.rdlc" />
+    <EmbeddedResource Include="Interfrace\References\SelectGuideToOperationForm.resx">
+      <DependentUpon>SelectGuideToOperationForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Interfrace\ReportsForms\StickerReportPreviewForm.resx">
+      <DependentUpon>StickerReportPreviewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\TitlePageReport.rdlc" />
+    <EmbeddedResource Include="Interfrace\ReportsForms\TitlePageReportPreviewForm.resx">
+      <DependentUpon>TitlePageReportPreviewForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <Content Include="Database\cour.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Database\pure_declaration.pdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <EmbeddedResource Include="VersionChanges.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>VersionChanges.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\DataSources\IncomeAndExpense.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <None Include="Resources\ЕСХН_Ч2_ВторойКодПоОКТМО.txt" />
+    <None Include="Resources\ЕСХН_Ч2_ПервыйКодПоОКТМО.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Pictures\eshn.ico" />
+    <Content Include="Pictures\Printer.png" />
+    <Content Include="Pictures\ЕСХН.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5 %28x86 и x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <PublishFile Include="Microsoft.ReportViewer.Common">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.DataVisualization">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.ProcessingObjectModel">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.ReportViewer.WinForms">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+    <PublishFile Include="Microsoft.SqlServer.Types">
+      <Visible>False</Visible>
+      <Group>
+      </Group>
+      <TargetPath>
+      </TargetPath>
+      <PublishState>Include</PublishState>
+      <IncludeHash>True</IncludeHash>
+      <FileType>Assembly</FileType>
+    </PublishFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Constants\Constants.csproj">
+      <Project>{8633c233-0af9-4331-be60-a9f42ba100dd}</Project>
+      <Name>Constants</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataProvider\DataProvider.csproj">
+      <Project>{82093079-4310-4a35-8f28-375e30d6a8b4}</Project>
+      <Name>DataProvider</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataStructures\DataStructures.csproj">
+      <Project>{747c9d1a-e42d-4bba-aa3e-c34a316669f2}</Project>
+      <Name>DataStructures</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Decryptor\Decryptor.csproj">
+      <Project>{5c5a673d-967b-45b3-ad1a-c0cd0d81c1e3}</Project>
+      <Name>Decryptor</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ESHNDeclaration\ESHNDeclarationPrinter.csproj">
+      <Project>{95e19c59-a8b9-40ee-a7dc-5b34f95204c2}</Project>
+      <Name>ESHNDeclarationPrinter</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Exceptions\Exceptions.csproj">
+      <Project>{4431be9c-1092-4d09-abb4-a23488da0c9d}</Project>
+      <Name>Exceptions</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KeyData\KeyData.csproj">
+      <Project>{d1ff77b9-fa4c-4ed8-8f45-79d09a14d548}</Project>
+      <Name>KeyData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ProgramLogic\ProgramLogic.csproj">
+      <Project>{8c7aa88a-efe2-43cd-b6bd-e3bbce2ec2c3}</Project>
+      <Name>ProgramLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Protector\Protector.csproj">
+      <Project>{ad9d345a-e012-4fde-99e1-209a8d629c3a}</Project>
+      <Name>Protector</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\TextBoxProcessor\TextBoxProcessor.csproj">
+      <Project>{f2e54622-a123-4366-801e-612d59765ded}</Project>
+      <Name>TextBoxProcessor</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="AcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </COMReference>
+    <COMReference Include="AxAcroPDFLib">
+      <Guid>{05BFD3F1-6319-4F30-B752-C7A22889BCC4}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>aximp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
